@@ -67,8 +67,8 @@ nav .header_right .algos button{
   border-style: groove;
   color:white;
   outline:none;
-  padding: 4% 0%;
-  font-size: large;
+  padding: 5% 0%;
+  font-size: 15px;
 }
 
 nav .header_right .nav-heading{
@@ -154,6 +154,3 @@ section #Info_Cont2 h3{
 .hide{
   display:none;
 }
-
-
-
