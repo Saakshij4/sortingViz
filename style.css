@@ -1,0 +1,219 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family:'Helvetica Neue',Helvetica, Arial, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#Section_cont{
+  background-color: #B3E8E5;
+}
+
+
+
+nav{
+  background-color: #053B50;
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  column-gap:10%;
+  padding: 0% 5%;
+}
+
+nav .array-inputs{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  place-content: 5% 0%;
+  background-color: #053B50;
+}
+
+nav .array-inputs #a_size{
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_speed{
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_generate{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color:white;
+  padding: 4% 0% 0% 0%;
+  padding-left: 20%;
+}
+
+nav .array-inputs #a_generate:hover{
+  cursor:pointer;
+}
+
+nav .header_right{
+  display: flex;
+  flex-direction: column;
+}
+
+nav .header_right .algos{
+  display:grid;
+  grid-template-columns: repeat(6,16.66667%);
+  place-content: center;
+  padding: 2% 0%;
+}
+
+nav .header_right .algos button{
+  background-color: transparent;
+  border-style: groove;
+  color:white;
+  outline:none;
+  padding: 5% 0%;
+  font-size: large;
+}
+
+nav .header_right .nav-heading{
+  display: inline-block;
+  font-size: 50px;
+  padding: 3% 0%;
+}
+
+nav .header_right .algos button:hover{
+  background-color: blue;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked{
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked:hover{
+  background-color: transparent;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_selected{
+  background-color: white;
+  color:green;
+}
+
+nav .header_right .algos .butt_selected:hover{
+  background-color: white;
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_unselected:hover{
+  background-color: blue;
+  cursor:pointer;
+}
+
+section{
+  display:grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+section .Complexity_Containers{
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions{
+  margin-top: 20%;
+}
+
+section .Complexity_Containers .Pair_Definitions p{
+  display: inline;
+}
+
+section .Complexity_Containers .Pair_Definitions p.Sub_Heading{
+  font-size: medium;
+  text-transform: none;
+}
+
+section #Info_Cont1{
+  padding: 20% 10%;
+}
+
+section #Info_Cont1 h3{
+  text-decoration: underline;
+}
+
+section #array_container{
+  display: flex;
+  width:100%;
+  height: 70vh;
+}
+
+section #Info_Cont2{
+  padding: 20% 10%;
+}
+
+section #Info_Cont2 h3{
+  text-decoration: underline;
+}
+
+.hide{
+  display:none;
+}
+
+
+/*Media Handling*/
+/* For screens smaller than 768px */
+@media only screen and (max-width: 767px) {
+  nav {
+    grid-template-columns: 1fr; /* Switch to single column layout */
+    grid-template-rows: auto auto; /* Allow dynamic height */
+    row-gap: 10px; /* Add space between rows */
+  }
+
+  nav .header_right .algos {
+    grid-template-columns: repeat(3, 1fr); /* Show buttons in 3 columns */
+  }
+}
+
+/* For screens between 768px and 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav .header_right .algos {
+    grid-template-columns: repeat(4, 1fr); /* Show buttons in 4 columns */
+  }
+}
+
+/* For screens larger than 1024px */
+@media only screen and (min-width: 1025px) {
+  nav {
+    grid-template-columns: 30% 70%; /* Revert back to original layout */
+  }
+
+  nav .header_right .algos {
+    grid-template-columns: repeat(6, 1fr); /* Show buttons in 6 columns */
+  }
+}
+
+/* Adjustments for smaller screens */
+nav .array-inputs {
+  grid-template-columns: 50% 50%; /* Adjust input fields to 50% width each */
+}
+
+nav .array-inputs #a_generate {
+  padding-left: 10%; /* Adjust button padding */
+}
+
+nav .header_right .nav-heading {
+  font-size: 30px; /* Reduce font size for smaller screens */
+}
+
+/* Make the container responsive */
+#array_container {
+  flex-wrap: wrap; /* Allow flex items to wrap */
+  justify-content: center; /* Center items */
+}
+
+/* Adjust padding for smaller screens */
+section #Info_Cont1,
+section #Info_Cont2 {
+  padding: 10% 5%;
+}
+
+/* Reduce margin-top for smaller screens */
+section .Complexity_Containers {
+  margin-top: 10%;
+}
